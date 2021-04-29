@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import TheNavbar from './layouts/TheNavbar';
-import TheHeader from './layouts/TheHeader';
-import TheAbout from './layouts/TheAbout';
-import TheProjects from './layouts/TheProjects';
-import TheFooter from './layouts/TheFooter';
+import TheNavbar from './components/layouts/TheNavbar';
+import TheHeader from './components/layouts/TheHeader';
+import TheAbout from './components/layouts/TheAbout';
+import TheProjects from './components/layouts/TheProjects';
+import TheFooter from './components/layouts/TheFooter';
 
 export default {
    components: {
