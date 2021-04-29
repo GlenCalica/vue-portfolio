@@ -1,6 +1,6 @@
 <template>
    <li>
-      <p>{{ key }}</p>
+      <h1>{{ index }}</h1>
       <h2>{{ name }}</h2>
       <p>{{ image }}</p>
       <p>{{ description }}</p>
