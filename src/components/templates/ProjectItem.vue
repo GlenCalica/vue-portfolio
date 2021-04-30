@@ -1,7 +1,7 @@
 <template>
    <li>
       <div class="static my-8">
-         <h1 class="absolute px-6 text-black">0{{ index + 1 }}</h1>
+         <h1 class="absolute px-6 text-custom-gray">0{{ index + 1 }}</h1>
          <img :src="require(`../../assets/images/${image}`)" :alt="`Screenshot of ${name}`">
       </div>
 

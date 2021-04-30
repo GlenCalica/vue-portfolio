@@ -6,6 +6,10 @@ module.exports = {
          fontFamily: {
             sans: ["Roboto"],
          },
+         colors: {
+            "custom-gray": "#212121",
+            "custom-white": "#F7F7F6",
+         },
       },
    },
    variants: {
