@@ -1,7 +1,7 @@
 <template>
    <li>
-      <h1>{{ index }}</h1>
-      <h2>{{ name }}</h2>
+      <h1 class="text-white">{{ index }}</h1>
+      <h2 class="text-white">{{ name }}</h2>
       <p>{{ image }}</p>
       <p>{{ description }}</p>
    </li>
