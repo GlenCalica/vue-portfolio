@@ -7,6 +7,22 @@ html {
    color: #f7f7f6;
 }
 
+html h1 {
+   font-weight: 700;
+   font-size: 6rem;
+}
+
+html h2 {
+   font-weight: 700;
+   font-size: 4rem;
+}
+
+html p {
+   font-weight: 300;
+   font-size: 2rem;
+   line-height: 2.5rem;
+}
+
 .wrapper {
    background-color: #212121;
 }

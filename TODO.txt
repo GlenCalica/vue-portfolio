@@ -1,1 +1,4 @@
+-change navbar "GC" background color
+-change project number text color
+
 -purge unused Tailwind styles

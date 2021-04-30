@@ -1,10 +1,12 @@
 <template>
-   <div class="wrapper">
-      <the-navbar></the-navbar>
-      <the-header></the-header>
-      <the-about></the-about>
-      <the-projects></the-projects>
-      <the-footer></the-footer>
+   <div class="wrapper flex justify-center">
+      <div class="container">
+         <the-navbar></the-navbar>
+         <the-header></the-header>
+         <the-about></the-about>
+         <the-projects></the-projects>
+         <the-footer></the-footer>
+      </div>
    </div>
 </template>
 
