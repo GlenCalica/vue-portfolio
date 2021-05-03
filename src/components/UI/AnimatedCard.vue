@@ -1,8 +1,11 @@
 <template>
-   <base-card class="center fixed z-30">
-      <div @click="$emit('close')">x</div>
-      <slot></slot>
-   </base-card>
+   <div>
+      <div class="fixed h-screen w-screen top-0 left-0 z-30" @click="$emit('close')"></div>
+      <base-card class="center fixed z-40">
+         <img class="fixed right-16" :src="require('../../assets/icons/close.svg')" @click="$emit('close')">
+         <slot></slot>
+      </base-card>
+   </div>
 </template>
 
 <script>

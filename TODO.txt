@@ -1,3 +1,5 @@
+TODO
+
 -links to FooterInfo.vue
 
 -cards that slide in and out
@@ -14,3 +16,5 @@
 -mobile view
 
 -purge unused Tailwind styles
+
+DONE

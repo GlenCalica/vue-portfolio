@@ -4,19 +4,20 @@
       <p class="text-xl font-bold self-center" @click="toggleCard">CONTACT</p>
    </section>
 
-   <animated-card v-if="cardIsOpen" @close="toggleCard">
-      <p>Test</p>
-   </animated-card>
+
+   <transition name="fade">
+      <animated-card v-if="cardIsOpen" @close="toggleCard">
+         <!-- <p>Test</p> -->
+      </animated-card>
+      <!-- <p v-if="cardIsOpen" @close="toggleCard">
+         Test
+      </p> -->
+   </transition>
 
 </template>
 
 <script>
-import AnimatedCard from '../UI/AnimatedCard.vue';
-
 export default {
-   components: {
-      AnimatedCard
-   },
    data() {
       return {
          cardIsOpen: false
@@ -29,3 +30,15 @@ export default {
    }
 }
 </script>
+
+<style scoped>
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+</style>
