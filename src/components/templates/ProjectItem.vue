@@ -6,12 +6,12 @@
       </div>
 
       <h2 class="text-white text-4xl my-4">{{ name }}</h2>
-      <p class="text-xl my-4">{{ description }}</p>
+      <p class="text-xl my-4">{{ summary }}</p>
    </li>
 </template>
 
 <script>
 export default {
-   props: ['index', 'name', 'image', 'description']
+   props: ['index', 'name', 'image', 'summary']
 }
 </script>
