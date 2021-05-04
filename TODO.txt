@@ -1,5 +1,7 @@
 TODO
 
+-"get in touch" active/hover styling
+
 -links to FooterInfo.vue
 
 -body shrinks left when screen reaches about on large screens

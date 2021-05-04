@@ -19,7 +19,9 @@ html h2 {
    font-size: 4rem;
 }
 
-html p {
+html p,
+html input,
+html textarea {
    font-weight: 300;
    font-size: 2rem;
    line-height: 2.5rem;
