@@ -5,14 +5,19 @@
          <p class="text-xl font-bold self-center" @click="toggleCard">CONTACT</p>
       </section>
 
-      <animated-card v-else @close="toggleCard">
-         <p>Test</p>
+      <animated-card v-else @close="toggleCard" title="Contact">
+         <contact-info></contact-info>
       </animated-card>
    </transition>
 </template>
 
 <script>
+import ContactInfo from '../templates/ContactInfo.vue';
+
 export default {
+   components: {
+      ContactInfo
+   },
    data() {
       return {
          cardIsOpen: false

@@ -3,7 +3,17 @@
       <base-card
          title="Contact" class="relative z-20"
       >
-         <h1>Test</h1>
+         <contact-info></contact-info>
       </base-card>
    </section>
 </template>
+
+<script>
+import ContactInfo from '../templates/ContactInfo.vue';
+
+export default {
+   components: {
+      ContactInfo
+   }
+}
+</script>

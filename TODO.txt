@@ -2,10 +2,6 @@ TODO
 
 -links to FooterInfo.vue
 
--cards that slide in and out
--project cards
--contact card
-
 -body shrinks left when screen reaches about on large screens
 -text animation on load
 
@@ -16,5 +12,3 @@ TODO
 -mobile view
 
 -purge unused Tailwind styles
-
-DONE
