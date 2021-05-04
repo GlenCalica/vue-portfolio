@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General Font Styles */
+
 html {
    color: #f7f7f6;
 }
@@ -25,4 +27,16 @@ html p {
 
 .wrapper {
    background-color: #212121;
+}
+
+/* Transition Styles */
+
+.fade-enter-active,
+.fade-leave-active {
+   transition: opacity 0.2s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+   opacity: 0;
 }
