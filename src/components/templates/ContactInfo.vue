@@ -13,6 +13,6 @@
       <label for="message"><p class="mb-2">Message</p></label>
       <textarea name="message" id="" cols="30" rows="3" class="w-full bg-custom-white border-b-4 border-custom-gray py-2 resize-none focus:outline-black" required></textarea>
 
-      <input type="submit" value="Get in Touch" class="p-4 border-custom-gray border-4 text-xl font-medium my-12">
+      <input type="submit" value="Get in Touch" class="p-4 border-custom-gray border-4 text-xl font-medium my-12 cursor-pointer">
    </form>
 </template>

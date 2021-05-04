@@ -1,5 +1,4 @@
 TODO
-
 -"get in touch" active/hover styling
 
 -links to FooterInfo.vue
@@ -14,3 +13,9 @@ TODO
 -mobile view
 
 -purge unused Tailwind styles
+
+BUGS
+-Card opacity layering
+
+MINOR FEATURES TO REVISIT
+-Links to projects on project cards (github and site)
