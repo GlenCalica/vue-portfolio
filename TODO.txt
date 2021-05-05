@@ -1,8 +1,6 @@
 TODO
 -"get in touch" active/hover styling
 
--links to FooterInfo.vue
-
 -body shrinks left when screen reaches about on large screens
 -text animation on load
 
@@ -15,7 +13,8 @@ TODO
 -purge unused Tailwind styles
 
 BUGS
--Card opacity layering
+-Card opacity layering (teleporting might fix this)
 
 MINOR FEATURES TO REVISIT
--Links to projects on project cards (github and site)
+-Link colours
+-Privacy link

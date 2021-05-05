@@ -12,6 +12,8 @@
             :image="image"
             :description="description"
             :tools="tools"
+            :github="github"
+            :liveExample="liveExample"
             ></project-details>
          </animated-card>
       </transition>
@@ -25,7 +27,7 @@
 import ProjectDetails from './ProjectDetails.vue';
 
 export default {
-   props: ['index', 'name', 'image', 'summary', 'description', 'tools'],
+   props: ['index', 'name', 'image', 'summary', 'description', 'tools', 'github', 'liveExample'],
    components: {
       ProjectDetails
    },
