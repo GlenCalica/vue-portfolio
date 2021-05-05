@@ -13,8 +13,8 @@ TODO
 -purge unused Tailwind styles
 
 BUGS
--Card opacity layering (teleporting might fix this)
+-fix navbar hitbox
 
 MINOR FEATURES TO REVISIT
--Link colours
--Privacy link
+-link colours
+-privacy link

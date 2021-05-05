@@ -5,18 +5,20 @@
          <img @click="toggleCard" :src="require(`../../assets/images/${image}`)" class="cursor-pointer" :alt="`Screenshot of ${name}`">
       </div>
 
-      <transition name="fade">
-         <animated-card v-if="cardIsOpen" @close="toggleCard" :title="name">
-            <project-details
-            :name="name"
-            :image="image"
-            :description="description"
-            :tools="tools"
-            :github="github"
-            :liveExample="liveExample"
-            ></project-details>
-         </animated-card>
-      </transition>
+      <teleport to="body">
+         <transition name="fade">
+            <animated-card v-if="cardIsOpen" @close="toggleCard" :title="name">
+               <project-details
+               :name="name"
+               :image="image"
+               :description="description"
+               :tools="tools"
+               :github="github"
+               :liveExample="liveExample"
+               ></project-details>
+            </animated-card>
+         </transition>
+      </teleport>
 
       <h2 class="text-white text-4xl my-4">{{ name }}</h2>
       <p class="text-xl my-4">{{ summary }}</p>
