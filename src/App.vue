@@ -1,5 +1,5 @@
 <template>
-   <div class="wrapper flex flex-wrap justify-center">
+   <div class="flex flex-wrap justify-center bg-custom-gray">
       <div class="container">
          <the-navbar></the-navbar>
          <the-header></the-header>

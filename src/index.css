@@ -27,8 +27,18 @@ html textarea {
    line-height: 2.5rem;
 }
 
-.wrapper {
-   background-color: #212121;
+html p a:hover {
+   background-color: #6effd3;
+   transition: background-color 0.2s;
+}
+
+::selection {
+   background: #6effd3; /* WebKit/Blink Browsers */
+   color: #212121;
+}
+::-moz-selection {
+   background: #6effd3; /* Gecko Browsers */
+   color: #212121;
 }
 
 /* Transition Styles */

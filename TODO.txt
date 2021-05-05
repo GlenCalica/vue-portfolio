@@ -4,13 +4,11 @@ TODO
 -body shrinks left when screen reaches about on large screens
 -text animation on load
 
--text highlight color
-
 -add custom images
 
 -mobile view
 
--purge unused Tailwind styles
+-accessibility
 
 BUGS
 -fix navbar hitbox
