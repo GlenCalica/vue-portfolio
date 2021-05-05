@@ -1,13 +1,15 @@
 <template>
-   <div class="flex flex-wrap justify-center bg-custom-gray">
-      <div class="container">
-         <the-navbar></the-navbar>
-         <the-header></the-header>
-         <the-about></the-about>
-         <the-projects></the-projects>
+   <transition name="fade" appear>
+      <div class="flex flex-wrap justify-center">
+         <div class="container">
+            <the-navbar></the-navbar>
+            <the-header></the-header>
+            <the-about></the-about>
+            <the-projects></the-projects>
+         </div>
+         <the-footer></the-footer>
       </div>
-      <the-footer></the-footer>
-   </div>
+   </transition>
 </template>
 
 <script>
@@ -27,3 +29,9 @@ export default {
    }
 }
 </script>
+
+<style scoped>
+.main {
+   min-width: 91vw;
+}
+</style>

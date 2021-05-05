@@ -1,18 +1,21 @@
 TODO
--"get in touch" active/hover styling
-
 -body shrinks left when screen reaches about on large screens
--text animation on load
 
 -add custom images
 
--mobile view
+-mobile view (REMEMBER MOBILE FIRST)
+   - screen > 1536px
+   - screen > 1280px
+   - screen > 1024px
+   - screen > 738px
+   - screen > 640px
+   
 
 -accessibility
 
 BUGS
 -fix navbar hitbox
+-fix body width in relation to cards at responsive breakpoints (ex. look at cards at screen width 1280px)
 
 MINOR FEATURES TO REVISIT
--link colours
 -privacy link

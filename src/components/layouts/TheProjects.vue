@@ -1,5 +1,5 @@
 <template>
-   <section class="min-h-screen flex flex-col justify-center py-24">
+   <section class="min-h-screen flex flex-col justify-center py-24 px-4">
       <h1>Projects</h1>
       <ul>
          <project-item
