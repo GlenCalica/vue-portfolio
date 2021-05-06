@@ -1,7 +1,7 @@
 <template>
    <div class="mb-4 lg:flex-nowrap lg:mb-8 flex flex-wrap justify-center mt-4">
       <div class="w-12/12 lg:w-5/12 lg:mr-4 mb-4">
-         <img class="w-10/12 h-auto border-custom-gray border-4" :src="require(`../../assets/images/${image}`)" :alt="`Screenshot of ${name}`">
+         <img class="w-10/12 sm:w-8/12 h-auto border-custom-gray border-4" :src="require(`../../assets/images/${image}`)" :alt="`Screenshot of ${name}`">
       </div>
       <p class="text-base leading-4 lg:text-xl lg:w-7/12 w-full">{{ description }}</p>
    </div>

@@ -4,8 +4,6 @@ TODO
 -add custom images
 
 -mobile view
-   - screen up to 640px
-   - screen up to 738px
    - screen up to 1024px
    - screen up to 1280px
    - screen up to 1536px
@@ -13,6 +11,8 @@ TODO
 
 finished mobile views
    - screen at 320px
+   - screen up to 640px
+   - screen up to 768px
 
 -accessibility
 

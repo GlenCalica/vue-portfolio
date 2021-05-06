@@ -1,5 +1,5 @@
 <template>
-   <section class="min-h-screen flex flex-col justify-end py-24 px-4">
+   <section class="min-h-screen flex flex-col justify-end py-24 px-4 md:px-16">
       <h1 class="text-6xl mb-4">About</h1>
       <p class="text-xl">Outside of the core of HTML, CSS, and JavaScript, there are so many tools available for web development and design. Here are some of mine.</p>
       <div class="flex py-8">

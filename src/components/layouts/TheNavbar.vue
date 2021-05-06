@@ -1,5 +1,5 @@
 <template>
-   <section class="pt-8 lg:pt-24 container fixed flex justify-between z-10 px-4">
+   <section class="pt-8 px-4 md:pt-12 md:px-16 lg:pt-24 container fixed flex justify-between z-10">
       <h1 class="text-3xl lg:text-4xl font-bold">GC</h1>
       <p class="text-xl lg:text-xl font-bold self-center cursor-pointer" @click="toggleCard">CONTACT</p>
    </section>
