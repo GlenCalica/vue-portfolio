@@ -1,5 +1,5 @@
 <template>
-   <div class="flex justify-between px-8">
+   <div class="flex justify-between px-8 xl:w-10/12 xl:self-center xl:px-0">
       <p class="text-sm sm:text-base lg:text-xl text-custom-gray font-medium">© 2021 Glen Calica</p>
       <div class="flex">
          <p class="text-sm  sm:text-base lg:text-xl text-custom-gray font-medium">Privacy</p>
