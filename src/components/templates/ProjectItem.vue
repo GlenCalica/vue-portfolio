@@ -1,7 +1,7 @@
 <template>
    <li>
       <div class="static my-8">
-         <h1 class="absolute px-6 text-custom-gray">0{{ index + 1 }}</h1>
+         <h1 class="text-6xl absolute p-6 text-custom-gray">0{{ index + 1 }}</h1>
          <img @click="toggleCard" :src="require(`../../assets/images/${image}`)" class="cursor-pointer" :alt="`Screenshot of ${name}`">
       </div>
 
@@ -21,7 +21,7 @@
       </teleport>
 
       <h2 class="text-white text-4xl my-4">{{ name }}</h2>
-      <p class="text-xl my-4">{{ summary }}</p>
+      <p class="text-xl my-4 leading-6">{{ summary }}</p>
    </li>
 </template>
 

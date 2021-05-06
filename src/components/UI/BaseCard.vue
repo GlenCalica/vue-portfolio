@@ -1,7 +1,7 @@
 <template>
-   <div class="card bg-custom-white shadow-xl px-64 py-16 flex flex-col justify-between md:px-32">
-      <div>
-         <h1 class="text-custom-gray font-medium">{{ title }}</h1>
+   <div class="card pb-8 pt-16 lg:py-16 bg-custom-white shadow-xl lg:px-64 flex flex-col justify-between md:px-32 overflow-auto">
+      <div class="w-10/12 self-center">
+         <h1 class="text-5xl text-custom-gray font-medium">{{ title }}</h1>
          <div class="text-custom-gray">
             <slot>
 

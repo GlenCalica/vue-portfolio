@@ -1,15 +1,15 @@
 <template>
-   <div class="flex my-8 md:flex-wrap md:justify-center md:mt-4">
-      <div class="w-5/12 mr-4 md:mb-4">
-         <img class="w-full h-auto border-custom-gray border-4" :src="require(`../../assets/images/${image}`)" :alt="`Screenshot of ${name}`">
+   <div class="mb-4 lg:flex-nowrap lg:mb-8 flex flex-wrap justify-center mt-4">
+      <div class="w-12/12 lg:w-5/12 lg:mr-4 mb-4">
+         <img class="w-10/12 h-auto border-custom-gray border-4" :src="require(`../../assets/images/${image}`)" :alt="`Screenshot of ${name}`">
       </div>
-      <p class="w-7/12 text-xl md:w-full">{{ description }}</p>
+      <p class="text-base leading-4 lg:text-xl lg:w-7/12 w-full">{{ description }}</p>
    </div>
-   <p class="mt-4 text-2xl md:w-full">Made with 
+   <p class="text-base leading-4 my-2 lg:text-2xl lg:my-4 w-full">Made with 
       <span class="font-bold">{{ tools }}</span>
    </p>
-   <p v-if="github" class="text-2xl my-4"><a :href="github" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to Github repository</p>
-   <p v-if="liveExample" class="text-2xl"><a :href="liveExample" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to live example</p>
+   <p v-if="github" class="text-base my-2 lg:text-2xl lg:my-4"><a :href="github" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to Github repository</p>
+   <p v-if="liveExample" class="text-base my-2 lg:text-2xl lg:my-4"><a :href="liveExample" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to live example</p>
 </template>
 
 <script>
