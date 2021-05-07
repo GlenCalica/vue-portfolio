@@ -3,13 +3,13 @@
       <div class="w-12/12 mb-4 lg:w-6/12 lg:mr-4 xl:w-5/12">
          <img class="w-10/12 sm:w-8/12 lg:w-full h-auto border-custom-gray border-4" :src="require(`../../assets/images/${image}`)" :alt="`Screenshot of ${name}`">
       </div>
-      <p class="w-full text-base leading-4 lg:text-lg lg:w-6/12 lg:leading-5 xl:w-7/12 xl:leading-6">{{ description }}</p>
+      <p class="w-full text-base leading-4 lg:text-lg lg:w-6/12 lg:leading-5 xl:w-7/12 xl:leading-6 2xl:text-2xl">{{ description }}</p>
    </div>
-   <p class="text-base leading-4 my-2 lg:text-xl lg:my-4 w-full">Made with 
+   <p class="text-base leading-4 my-2 lg:text-xl lg:my-4 2xl:text-2xl w-full">Made with 
       <span class="font-bold">{{ tools }}</span>
    </p>
-   <p v-if="github" class="text-base my-2 lg:text-xl lg:my-4"><a :href="github" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to Github repository</p>
-   <p v-if="liveExample" class="text-base my-2 lg:text-2xl lg:my-4"><a :href="liveExample" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to live example</p>
+   <p v-if="github" class="text-base my-2 lg:text-xl lg:my-4 2xl:text-2xl"><a :href="github" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to Github repository</p>
+   <p v-if="liveExample" class="text-base my-2 lg:text-2xl lg:my-4 2xl:text-2xl"><a :href="liveExample" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to live example</p>
 </template>
 
 <script>

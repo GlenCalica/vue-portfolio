@@ -1,15 +1,17 @@
 <template>
-   <transition name="fade" appear>
-      <div class="flex flex-wrap justify-center">
-         <div class="container">
-            <the-navbar></the-navbar>
-            <the-header></the-header>
-            <the-about></the-about>
-            <the-projects></the-projects>
-         </div>
-         <the-footer></the-footer>
+
+   <div class="flex flex-wrap justify-center">
+      <div class="container h-full">
+         <the-navbar></the-navbar>
+         <the-header></the-header>
+         <the-about></the-about>
+         <the-projects></the-projects>
       </div>
-   </transition>
+   </div>
+   <div class="flex justify-center">
+      <the-footer></the-footer>
+   </div>
+
 </template>
 
 <script>

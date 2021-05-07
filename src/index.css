@@ -10,6 +10,7 @@
 html {
    overflow-x: hidden;
 }
+
 /* General Font Styles */
 
 html {
@@ -54,4 +55,12 @@ html textarea {
 .fade-enter-from,
 .fade-leave-to {
    opacity: 0;
+}
+
+/* Responsive Styles */
+
+@media only screen and (min-width: 1921px) {
+   section:not(#projects) {
+      max-height: 1080px;
+   }
 }

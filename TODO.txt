@@ -3,6 +3,8 @@ TODO
 
 -add custom images
 
+-cards on displays over 1920px (media query on BaseCard.vue)
+
 -mobile view
    - screen above 1536px
 

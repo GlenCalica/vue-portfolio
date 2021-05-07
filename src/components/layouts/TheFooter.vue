@@ -1,5 +1,5 @@
 <template>
-   <section class="min-h-screen pt-24 pb-6">
+   <section class="h-screen pt-24 pb-6 align-bottom">
       <base-card
          title="Contact" class="relative z-20"
       >
