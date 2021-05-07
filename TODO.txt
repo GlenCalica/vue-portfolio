@@ -7,7 +7,6 @@ TODO
 
 BUGS
 -fix navbar hitbox
--fix body width in relation to cards at responsive breakpoints (ex. look at cards at screen width 1280px)
 
 MINOR FEATURES TO REVISIT
 -privacy link
