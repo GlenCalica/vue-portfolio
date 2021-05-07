@@ -2,7 +2,7 @@
    <li>
       <div class="static my-8">
          <h1 class="text-6xl lg:text-8xl 2xl:text-8xl p-6 absolute text-custom-gray">0{{ index + 1 }}</h1>
-         <img @click="toggleCard" :src="require(`../../assets/images/${image}`)" class="cursor-pointer" :alt="`Screenshot of ${name}`">
+         <img @click="toggleCard" :src="require(`../../assets/images/${image}`)" class="cursor-pointer" :alt="`Screenshot of ${name}`" loading="lazy">
       </div>
 
       <teleport to="body">
