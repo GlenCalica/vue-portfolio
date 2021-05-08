@@ -54,12 +54,12 @@ export default {
    },
    watch: {
       yPos() {
-         if (this.browserWidth > 1000 && this.containerIsExpanded && this.yPos + 200 > this.aboutYPos) {
-            document.getElementById("body").style.width = "50%";
+         if (this.browserWidth > 1000 && this.browserWidth < 3841 && this.containerIsExpanded && this.yPos + 200 > this.aboutYPos) {
+            document.getElementById("body").style.width = "55%";
             document.getElementById("slider").style.right = "0px";
             this.containerIsExpanded = false;
          }
-         else if (this.browserWidth > 1000 && !this.containerIsExpanded && this.yPos + 200 < this.aboutYPos) {
+         else if (this.browserWidth > 1000 && this.browserWidth < 3841 && !this.containerIsExpanded && this.yPos + 200 < this.aboutYPos) {
             document.getElementById("body").style.width = "100%";
             document.getElementById("slider").style.right = `-${this.sliderWidth}px`;
             this.containerIsExpanded = true;

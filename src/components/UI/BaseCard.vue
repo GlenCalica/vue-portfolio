@@ -34,6 +34,8 @@ export default {
    .card {
       height: 858px;
       width: 1526px;
+      min-height: 858px;
+      min-width: 1526px;
    }
 }
 </style>
