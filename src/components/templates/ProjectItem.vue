@@ -29,6 +29,7 @@
 import ProjectDetails from './ProjectDetails.vue';
 
 export default {
+   emits: ['cardIsToggled'],
    props: ['index', 'name', 'image', 'summary', 'description', 'tools', 'github', 'liveExample'],
    components: {
       ProjectDetails
@@ -41,6 +42,7 @@ export default {
    methods: {
       toggleCard() {
          this.cardIsOpen = !this.cardIsOpen;
+         this.$parent.$emit('cardIsToggled', this.cardIsOpen);
       }
    }
 }
