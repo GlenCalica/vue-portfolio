@@ -44,6 +44,7 @@ export default {
    },
    created() {
       window.addEventListener("scroll", this.updateYPos);
+      window.addEventListener("resize", this.updateSlider);
    },
    mounted() {
       document.getElementById("body").style.width = "100%";
@@ -75,6 +76,9 @@ export default {
       },
       updateCardIsToggled(value) {
          this.cardIsOpen = value;
+      },
+      updateSlider() {
+         document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`;
       }
    }
 }
