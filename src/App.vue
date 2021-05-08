@@ -37,40 +37,36 @@ export default {
          browserWidth: 0,
          yPos: 0,
          aboutYPos: 0,
-         sliderWidth: 0,
+         sliderRatio: 5/12,
          containerIsExpanded: true,
          cardIsOpen: false
       }
    },
    created() {
-      window.addEventListener("resize", this.updateBrowserWidth);
       window.addEventListener("scroll", this.updateYPos);
    },
    mounted() {
-      this.updateBrowserWidth();
       document.getElementById("body").style.width = "100%";
-      document.getElementById("slider").style.width = `${this.sliderWidth}px`;
-      document.getElementById("slider").style.right = `-${this.sliderWidth}px`;
+      document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`;
+      document.getElementById("slider").style.right = `-${window.innerWidth * this.sliderRatio}px`;
    },
    watch: {
       yPos() {
-         if (this.browserWidth > 1000 && this.browserWidth < 3841 && this.containerIsExpanded && this.yPos + 200 > this.aboutYPos) {
-            document.getElementById("body").style.width = "55%";
+         if (window.innerWidth > 1000 && window.innerWidth < 3841 && this.containerIsExpanded && this.yPos + 200 > this.aboutYPos) {
+            document.getElementById("body").style.width = "50%";
+            document.getElementById("slider").style.width = `${(window.innerWidth * this.sliderRatio)}px`; //This needs to be recalculated in the case the user zooms in/out
             document.getElementById("slider").style.right = "0px";
             this.containerIsExpanded = false;
          }
-         else if (this.browserWidth > 1000 && this.browserWidth < 3841 && !this.containerIsExpanded && this.yPos + 200 < this.aboutYPos) {
+         else if (!this.containerIsExpanded && this.yPos + 200 < this.aboutYPos) {
             document.getElementById("body").style.width = "100%";
-            document.getElementById("slider").style.right = `-${this.sliderWidth}px`;
+            document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`; //This needs to be recalculated in the case the user zooms in/out
+            document.getElementById("slider").style.right = `-${window.innerWidth * this.sliderRatio}px`;
             this.containerIsExpanded = true;
          }
       }
    },
    methods: {
-      updateBrowserWidth() {
-         this.browserWidth = window.innerWidth;
-         this.sliderWidth = this.browserWidth * (5/12);
-      },
       updateYPos() {
          this.yPos = window.scrollY;
       },

@@ -4,10 +4,8 @@ TODO
 -privacy link
 
 BUGS
--card height on large displays
 
 MINOR FEATURES TO REVISIT
 
 BUGS I WON'T FIX
 -there is an invisible hitbox between navbar elements. This has to do with flex-box. It's a minor issue and the solution is janky (manually setting the position of the elements), so I'm deciding not to fix it.
--zooming in/out after page load messes up slider size. This is because zooming in/out doesn't trigger a resize event listener (even if the window.innerWidth changes). This bug is rare, but I might try to revisit it in the future. One possible solution is updating the browser width at a time interval, but this is janky.
