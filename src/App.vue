@@ -90,6 +90,7 @@ export default {
 }
 
 #slider {
-   transition: right 0.5s ease-out;
+   transition: right 0.3s ease-out;
+   background-image: url('~@/assets/images/image.png');
 }
 </style>

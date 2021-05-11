@@ -57,6 +57,16 @@ html textarea {
    opacity: 0;
 }
 
+.quick-fade-enter-active,
+.quick-fade-leave-active {
+   transition: opacity 0.1s ease-in-out;
+}
+
+.quick-fade-enter-from,
+.quick-fade-leave-to {
+   opacity: 0;
+}
+
 /* Responsive Styles */
 
 @media only screen and (min-width: 1921px) {
