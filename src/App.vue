@@ -35,37 +35,37 @@ export default {
    },
    data() {
       return {
-         browserWidth: 0,
          yPos: 0,
          aboutYPos: 0,
          sliderRatio: 5/12,
+         sliderWidth: 0,
          containerIsExpanded: true,
          cardIsOpen: false,
          tabOrder: 0
       }
    },
    created() {
-      window.addEventListener("scroll", this.updateYPos);
-      window.addEventListener("resize", this.updateSlider);
+      window.addEventListener("scroll", () => {
+         this.yPos = window.scrollY;
+      });
+      
+      window.addEventListener("resize", () => {
+         document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`;
+      });
    },
    mounted() {
-      document.getElementById("body").style.width = "100%";
-      document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`;
-      document.getElementById("slider").style.right = `-${window.innerWidth * this.sliderRatio}px`;
+      this.sliderWidth = window.innerWidth * this.sliderRatio;
+      this.updateSlider(100, this.sliderWidth, -this.sliderWidth, true);
    },
    watch: {
       yPos() {
+         this.sliderWidth = window.innerWidth * this.sliderRatio; //This needs to be recalculated everytime since zooming in/out doesn't trigger a resize event
+
          if (window.innerWidth > 1000 && window.innerWidth < 3841 && this.containerIsExpanded && this.yPos + 500 > this.aboutYPos) {
-            document.getElementById("body").style.width = "50%";
-            document.getElementById("slider").style.width = `${(window.innerWidth * this.sliderRatio)}px`; //This needs to be recalculated in the case the user zooms in/out
-            document.getElementById("slider").style.right = "0px";
-            this.containerIsExpanded = false;
+            this.updateSlider(50, this.sliderWidth, 0, false);
          }
          else if (!this.containerIsExpanded && this.yPos + 500 < this.aboutYPos) {
-            document.getElementById("body").style.width = "100%";
-            document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`; //This needs to be recalculated in the case the user zooms in/out
-            document.getElementById("slider").style.right = `-${window.innerWidth * this.sliderRatio}px`;
-            this.containerIsExpanded = true;
+            this.updateSlider(100, this.sliderWidth, -this.sliderWidth, true);
          }
       },
       cardIsOpen() {
@@ -73,17 +73,17 @@ export default {
       }
    },
    methods: {
-      updateYPos() {
-         this.yPos = window.scrollY;
-      },
       updateAboutYPos(value) {
          this.aboutYPos = value;
       },
       updateCardIsToggled(value) {
          this.cardIsOpen = value;
       },
-      updateSlider() {
-         document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`;
+      updateSlider(bodyWidth, sliderWidth, sliderRight, containerIsExpanded) {
+         document.getElementById("body").style.width = `${bodyWidth}%`;
+         document.getElementById("slider").style.width = `${sliderWidth}px`;
+         document.getElementById("slider").style.right = `${sliderRight}px`;
+         this.containerIsExpanded = containerIsExpanded;
       }
    }
 }
