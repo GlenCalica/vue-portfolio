@@ -1,10 +1,10 @@
 <template>
    <div class="flex justify-center">
       <div class="container h-full">
-         <the-navbar v-if="!cardIsOpen"></the-navbar>
+         <the-navbar :cardIsOpen="cardIsOpen" @cardIsToggled="updateCardIsToggled"></the-navbar>
 
          <div id="body" class="bg-custom-gray">
-         <the-header></the-header>
+            <the-header></the-header>
             <the-about @updateAboutYPos="updateAboutYPos"></the-about>
             <the-projects @cardIsToggled="updateCardIsToggled"></the-projects>
          </div>
@@ -13,7 +13,8 @@
    <div id="slider" class="fixed top-0 bg-custom-white h-screen"></div>
 
    <div class="flex justify-center">
-      <the-footer></the-footer>
+      <the-footer v-if="!cardIsOpen"></the-footer>
+      <div v-else-if="cardIsOpen" class="h-screen mt-24 mb-6 align-bottom"></div>
    </div>
 </template>
 
@@ -39,7 +40,13 @@ export default {
          aboutYPos: 0,
          sliderRatio: 5/12,
          containerIsExpanded: true,
-         cardIsOpen: false
+         cardIsOpen: false,
+         tabOrder: 0
+      }
+   },
+   provide() {
+      return {
+         tabOrder: this.tabOrder
       }
    },
    created() {
@@ -65,6 +72,9 @@ export default {
             document.getElementById("slider").style.right = `-${window.innerWidth * this.sliderRatio}px`;
             this.containerIsExpanded = true;
          }
+      },
+      cardIsOpen() {
+         this.cardIsOpen ? this.tabOrder = -1 : this.tabOrder = 0
       }
    },
    methods: {

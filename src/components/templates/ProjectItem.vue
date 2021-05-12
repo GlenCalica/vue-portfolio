@@ -1,6 +1,6 @@
 <template>
    <li>
-      <div class="static my-8">
+      <div class="static my-8" @keydown.enter="toggleCard" :tabindex="tabOrder">
          <h1 class="text-6xl lg:text-8xl 2xl:text-8xl p-6 absolute text-custom-gray">0{{ index + 1 }}</h1>
          <img @click="toggleCard" :src="require(`../../assets/images/${image}`)" class="cursor-pointer" :alt="`Screenshot of ${name}`" loading="lazy">
       </div>
@@ -31,6 +31,7 @@ import ProjectDetails from './ProjectDetails.vue';
 export default {
    emits: ['cardIsToggled'],
    props: ['index', 'name', 'image', 'summary', 'description', 'tools', 'github', 'liveExample'],
+   inject: ['tabOrder'],
    components: {
       ProjectDetails
    },
