@@ -53,13 +53,13 @@ export default {
    },
    watch: {
       yPos() {
-         if (window.innerWidth > 1000 && window.innerWidth < 3841 && this.containerIsExpanded && this.yPos + 200 > this.aboutYPos) {
+         if (window.innerWidth > 1000 && window.innerWidth < 3841 && this.containerIsExpanded && this.yPos + 500 > this.aboutYPos) {
             document.getElementById("body").style.width = "50%";
             document.getElementById("slider").style.width = `${(window.innerWidth * this.sliderRatio)}px`; //This needs to be recalculated in the case the user zooms in/out
             document.getElementById("slider").style.right = "0px";
             this.containerIsExpanded = false;
          }
-         else if (!this.containerIsExpanded && this.yPos + 200 < this.aboutYPos) {
+         else if (!this.containerIsExpanded && this.yPos + 500 < this.aboutYPos) {
             document.getElementById("body").style.width = "100%";
             document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`; //This needs to be recalculated in the case the user zooms in/out
             document.getElementById("slider").style.right = `-${window.innerWidth * this.sliderRatio}px`;

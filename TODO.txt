@@ -1,7 +1,6 @@
 TODO
--add custom images
+-add sass apply to css
 -accessibility
--privacy link
 
 BUGS
 

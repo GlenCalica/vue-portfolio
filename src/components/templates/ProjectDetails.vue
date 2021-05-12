@@ -5,7 +5,7 @@
       </div>
       <p class="w-full text-base leading-4 lg:text-lg lg:w-6/12 lg:leading-5 xl:w-7/12 xl:leading-6 2xl:text-2xl">{{ description }}</p>
    </div>
-   <p class="text-base leading-4 my-2 lg:text-xl lg:my-4 2xl:text-2xl w-full">Made with 
+   <p class="text-base leading-4 my-2 lg:text-xl lg:my-4 2xl:text-2xl w-full">Tools used: 
       <span class="font-bold">{{ tools }}</span>
    </p>
    <p v-if="github" class="text-base my-2 lg:text-xl lg:my-4 2xl:text-2xl"><a :href="github" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to Github repository</p>
