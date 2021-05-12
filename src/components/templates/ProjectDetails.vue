@@ -8,8 +8,8 @@
    <p class="text-base leading-4 my-2 lg:text-xl lg:my-4 2xl:text-2xl w-full">Tools used: 
       <span class="font-bold">{{ tools }}</span>
    </p>
-   <p v-if="github" class="text-base my-2 lg:text-xl lg:my-4 2xl:text-2xl"><a :href="github" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to Github repository</p>
-   <p v-if="liveExample" class="text-base my-2 lg:text-2xl lg:my-4 2xl:text-2xl"><a :href="liveExample" target="_blank" class="font-bold hover:bg-custom-mint transition-colors">Link</a> to live example</p>
+   <p v-if="github" class="text-base my-2 lg:text-xl lg:my-4 2xl:text-2xl"><a :href="github" target="_blank" class="font-bold hover:bg-custom-mint transition-colors focus:outline-black">Link</a> to Github repository</p>
+   <p v-if="liveExample" class="text-base my-2 lg:text-2xl lg:my-4 2xl:text-2xl"><a :href="liveExample" target="_blank" class="font-bold hover:bg-custom-mint transition-colors focus:outline-black">Link</a> to live example</p>
 </template>
 
 <script>

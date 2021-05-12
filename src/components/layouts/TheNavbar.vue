@@ -2,7 +2,7 @@
    <transition name="fade">
       <section id="navbar" class="pt-8 px-4 md:pt-12 md:px-16 lg:pt-24 container fixed flex justify-between z-20" v-if="!contactIsOpen && !cardIsOpen">
          <h1 class="text-3xl lg:text-4xl 2xl:text-5xl font-bold bg-custom-gray text-custom-white p-2">GC</h1>
-         <p class="text-xl lg:text-xl 2xl:text-2xl font-bold self-center cursor-pointer bg-custom-gray p-2" @click="toggleCard" @keydown.enter="toggleCard" tabindex="0">CONTACT</p>
+         <p class="text-xl lg:text-xl 2xl:text-2xl font-bold self-center cursor-pointer bg-custom-gray p-2  focus:outline-white" @click="toggleCard" @keydown.enter="toggleCard" tabindex="0">CONTACT</p>
       </section>
    </transition>
 

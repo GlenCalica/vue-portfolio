@@ -1,6 +1,6 @@
 <template>
    <li>
-      <div class="static my-8" @keydown.enter="toggleCard" :tabindex="tabOrder">
+      <div class="static my-8 focus:outline-white" @keydown.enter="toggleCard" :tabindex="tabOrder">
          <h1 class="text-6xl lg:text-8xl 2xl:text-8xl p-6 absolute text-custom-gray">0{{ index + 1 }}</h1>
          <img @click="toggleCard" :src="require(`../../assets/images/${image}`)" class="cursor-pointer" :alt="`Screenshot of ${name}`" loading="lazy">
       </div>
@@ -22,7 +22,6 @@
 
       <h2 class="text-white text-4xl my-4">{{ name }}</h2>
       <p class="text-xl my-4 leading-6">{{ summary }}</p>
-      <p>{{ tabOrder }}</p>
    </li>
 </template>
 
