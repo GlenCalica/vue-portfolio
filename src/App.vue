@@ -6,7 +6,7 @@
          <div id="body" class="bg-custom-gray">
             <the-header></the-header>
             <the-about @updateAboutYPos="updateAboutYPos"></the-about>
-            <the-projects @cardIsToggled="updateCardIsToggled"></the-projects>
+            <the-projects @cardIsToggled="updateCardIsToggled" :tabOrder="tabOrder"></the-projects>
          </div>
       </div>
    </div>
@@ -42,11 +42,6 @@ export default {
          containerIsExpanded: true,
          cardIsOpen: false,
          tabOrder: 0
-      }
-   },
-   provide() {
-      return {
-         tabOrder: this.tabOrder
       }
    },
    created() {

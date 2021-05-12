@@ -22,6 +22,7 @@
 
       <h2 class="text-white text-4xl my-4">{{ name }}</h2>
       <p class="text-xl my-4 leading-6">{{ summary }}</p>
+      <p>{{ tabOrder }}</p>
    </li>
 </template>
 
@@ -30,8 +31,7 @@ import ProjectDetails from './ProjectDetails.vue';
 
 export default {
    emits: ['cardIsToggled'],
-   props: ['index', 'name', 'image', 'summary', 'description', 'tools', 'github', 'liveExample'],
-   inject: ['tabOrder'],
+   props: ['index', 'name', 'image', 'summary', 'description', 'tools', 'github', 'liveExample', 'tabOrder'],
    components: {
       ProjectDetails
    },
@@ -45,6 +45,6 @@ export default {
          this.cardIsOpen = !this.cardIsOpen;
          this.$parent.$emit('cardIsToggled', this.cardIsOpen);
       }
-   }
+   },
 }
 </script>

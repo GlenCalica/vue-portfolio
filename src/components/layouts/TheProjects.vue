@@ -13,6 +13,7 @@
             :tools="project.tools"
             :github="project.github"
             :liveExample="project.liveExample"
+            :tabOrder="tabOrder"
          ></project-item>
       </ul>
    </section>
@@ -25,6 +26,7 @@ export default {
    components: {
       ProjectItem
    },
+   props: ['tabOrder'],
    data() {
       return {
          projects: [
