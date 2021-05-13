@@ -1,10 +1,4 @@
 TODO
--accessibility
-
-BUGS
--fix window resize slider width and right
-
-MINOR FEATURES TO REVISIT
-
-BUGS I WON'T FIX
--there is an invisible hitbox between navbar elements. This has to do with flex-box. It's a minor issue and the solution is janky (manually setting the position of the elements), so I'm deciding not to fix it.
+-npm run build
+-make repo public
+-link calica.ca to repo
