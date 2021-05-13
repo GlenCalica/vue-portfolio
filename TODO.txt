@@ -2,6 +2,7 @@ TODO
 -accessibility
 
 BUGS
+-fix window resize slider width and right
 
 MINOR FEATURES TO REVISIT
 

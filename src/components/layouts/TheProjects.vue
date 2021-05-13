@@ -41,23 +41,13 @@ export default {
             },
             // {
             //    key: '2',
-            //    name: 'Project 2',
-            //    image: 'test2.png',
-            //    summary: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-            //    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et malesuada fames ac turpis egestas. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Morbi non arcu risus quis varius quam quisque id. Placerat orci nulla pellentesque dignissim.',
-            //    tools: 'html, css, vuejs, tailwindcss',
-            //    github: '',
-            //    liveExample: ''
-            // },
-            // {
-            //    key: '3',
-            //    name: 'Project 3',
-            //    image: 'test3.png',
-            //    summary: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-            //    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et malesuada fames ac turpis egestas. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Morbi non arcu risus quis varius quam quisque id. Placerat orci nulla pellentesque dignissim.',
-            //    tools: 'html, css, vuejs, tailwindcss',
-            //    github: '',
-            //    liveExample: ''
+            //    name: 'Project Name',
+            //    image: 'Image File Name',
+            //    summary: 'Short summary',
+            //    description: 'Long description displayed on card',
+            //    tools: 'tools listed',
+            //    github: 'github link',
+            //    liveExample: 'live example link'
             // }
          ]
       }
