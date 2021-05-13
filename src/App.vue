@@ -50,22 +50,30 @@ export default {
       });
       
       window.addEventListener("resize", () => {
-         document.getElementById("slider").style.width = `${window.innerWidth * this.sliderRatio}px`;
+         if (!this.containerIsExpanded && (window.innerWidth < 1000 || window.innerWidth > 3841)) {
+            this.updateSlider(100, -this.sliderWidth, true);
+         }
+         else if (this.containerIsExpanded && window.innerWidth > 1000 && window.innerWidth < 3841) {
+            this.updateSlider(50, 0, false);
+         }
+         else {
+            document.getElementById("slider").style.width = `${this.sliderWidth}px`;
+         }
       });
    },
    mounted() {
       this.sliderWidth = window.innerWidth * this.sliderRatio;
-      this.updateSlider(100, this.sliderWidth, -this.sliderWidth, true);
+      this.updateSlider(100, -this.sliderWidth, true);
    },
    watch: {
       yPos() {
          this.sliderWidth = window.innerWidth * this.sliderRatio; //This needs to be recalculated everytime since zooming in/out doesn't trigger a resize event
 
          if (window.innerWidth > 1000 && window.innerWidth < 3841 && this.containerIsExpanded && this.yPos + 500 > this.aboutYPos) {
-            this.updateSlider(50, this.sliderWidth, 0, false);
+            this.updateSlider(50, 0, false);
          }
          else if (!this.containerIsExpanded && this.yPos + 500 < this.aboutYPos) {
-            this.updateSlider(100, this.sliderWidth, -this.sliderWidth, true);
+            this.updateSlider(100, -this.sliderWidth, true);
          }
       },
       cardIsOpen() {
@@ -79,9 +87,9 @@ export default {
       updateCardIsToggled(value) {
          this.cardIsOpen = value;
       },
-      updateSlider(bodyWidth, sliderWidth, sliderRight, containerIsExpanded) {
+      updateSlider(bodyWidth, sliderRight, containerIsExpanded) {
          document.getElementById("body").style.width = `${bodyWidth}%`;
-         document.getElementById("slider").style.width = `${sliderWidth}px`;
+         document.getElementById("slider").style.width = `${this.sliderWidth}px`;
          document.getElementById("slider").style.right = `${sliderRight}px`;
          this.containerIsExpanded = containerIsExpanded;
       }
