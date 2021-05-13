@@ -41,7 +41,9 @@ export default {
          sliderWidth: 0,
          containerIsExpanded: true,
          cardIsOpen: false,
-         tabOrder: 0
+         tabOrder: 0,
+         minWidth: 1200,
+         maxWidth: 3841
       }
    },
    created() {
@@ -50,10 +52,10 @@ export default {
       });
       
       window.addEventListener("resize", () => {
-         if (!this.containerIsExpanded && (window.innerWidth < 1000 || window.innerWidth > 3841)) {
+         if (!this.containerIsExpanded && (window.innerWidth < this.minWidth || window.innerWidth > this.maxWidth)) {
             this.updateSlider(100, -this.sliderWidth, true);
          }
-         else if (this.containerIsExpanded && window.innerWidth > 1000 && window.innerWidth < 3841) {
+         else if (this.containerIsExpanded && window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth) {
             this.updateSlider(50, 0, false);
          }
          else {
@@ -69,7 +71,7 @@ export default {
       yPos() {
          this.sliderWidth = window.innerWidth * this.sliderRatio; //This needs to be recalculated everytime since zooming in/out doesn't trigger a resize event
 
-         if (window.innerWidth > 1000 && window.innerWidth < 3841 && this.containerIsExpanded && this.yPos + 500 > this.aboutYPos) {
+         if (window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth && this.containerIsExpanded && this.yPos + 500 > this.aboutYPos) {
             this.updateSlider(50, 0, false);
          }
          else if (!this.containerIsExpanded && this.yPos + 500 < this.aboutYPos) {
