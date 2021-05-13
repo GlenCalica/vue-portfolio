@@ -39,7 +39,7 @@ export default {
          aboutYPos: 0,
          sliderRatio: 5/12,
          sliderWidth: 0,
-         containerIsExpanded: true,
+         sliderIsExpanded: false,
          cardIsOpen: false,
          tabOrder: 0,
          minWidth: 1200,
@@ -52,30 +52,31 @@ export default {
       });
       
       window.addEventListener("resize", () => {
-         if (!this.containerIsExpanded && (window.innerWidth < this.minWidth || window.innerWidth > this.maxWidth)) {
-            this.updateSlider(100, -this.sliderWidth, true);
+         this.sliderWidth = window.innerWidth * this.sliderRatio;
+         document.getElementById("slider").style.width = `${this.sliderWidth}px`;
+         
+         if (this.sliderIsExpanded && (window.innerWidth < this.minWidth || window.innerWidth > this.maxWidth)) {
+            this.expandSlider(false);
          }
-         else if (this.containerIsExpanded && window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth) {
-            this.updateSlider(50, 0, false);
-         }
-         else {
-            document.getElementById("slider").style.width = `${this.sliderWidth}px`;
+         else if (!this.sliderIsExpanded && window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth) {
+            this.expandSlider(true);
          }
       });
    },
    mounted() {
       this.sliderWidth = window.innerWidth * this.sliderRatio;
-      this.updateSlider(100, -this.sliderWidth, true);
+      this.expandSlider(false);
    },
    watch: {
       yPos() {
-         this.sliderWidth = window.innerWidth * this.sliderRatio; //This needs to be recalculated everytime since zooming in/out doesn't trigger a resize event
+         this.sliderWidth = window.innerWidth * this.sliderRatio;
+         document.getElementById("slider").style.width = `${this.sliderWidth}px`;
 
-         if (window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth && this.containerIsExpanded && this.yPos + 500 > this.aboutYPos) {
-            this.updateSlider(50, 0, false);
+         if (window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth && !this.sliderIsExpanded && this.yPos + 500 > this.aboutYPos) {
+            this.expandSlider(true);
          }
-         else if (!this.containerIsExpanded && this.yPos + 500 < this.aboutYPos) {
-            this.updateSlider(100, -this.sliderWidth, true);
+         else if (this.sliderIsExpanded && this.yPos + 500 < this.aboutYPos) {
+            this.expandSlider(false);
          }
       },
       cardIsOpen() {
@@ -89,11 +90,17 @@ export default {
       updateCardIsToggled(value) {
          this.cardIsOpen = value;
       },
-      updateSlider(bodyWidth, sliderRight, containerIsExpanded) {
-         document.getElementById("body").style.width = `${bodyWidth}%`;
-         document.getElementById("slider").style.width = `${this.sliderWidth}px`;
-         document.getElementById("slider").style.right = `${sliderRight}px`;
-         this.containerIsExpanded = containerIsExpanded;
+      expandSlider(expand) {
+         if (expand) {
+            document.getElementById("body").style.width = "50%";
+            document.getElementById("slider").style.right = "0px";
+            this.sliderIsExpanded = true;
+         }
+         else {
+            document.getElementById("body").style.width = "100%";
+            document.getElementById("slider").style.right = `${-this.sliderWidth}px`;
+            this.sliderIsExpanded = false;
+         }
       }
    }
 }
