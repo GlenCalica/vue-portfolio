@@ -1,4 +1,0 @@
-TODO
--npm run build
--make repo public
--link calica.ca to repo
