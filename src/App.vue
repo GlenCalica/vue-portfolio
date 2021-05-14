@@ -58,8 +58,11 @@ export default {
          if (this.sliderIsExpanded && (window.innerWidth < this.minWidth || window.innerWidth > this.maxWidth)) {
             this.expandSlider(false);
          }
-         else if (!this.sliderIsExpanded && window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth) {
+         else if (!this.sliderIsExpanded && window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth && this.yPos + 500 > this.aboutYPos) {
             this.expandSlider(true);
+         }
+         else if (!this.sliderIsExpanded && window.innerWidth >= this.minWidth && window.innerWidth <= this.maxWidth) {
+            this.expandSlider(false);
          }
       });
    },
