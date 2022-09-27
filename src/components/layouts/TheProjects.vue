@@ -1,5 +1,8 @@
 <template>
-   <section id="projects" class="min-h-full flex flex-col justify-center my-24 px-4 md:px-16 bg-custom-gray">
+   <section
+      id="projects"
+      class="min-h-full flex flex-col justify-center my-24 px-4 md:px-16 bg-custom-gray"
+   >
       <h1 class="text-6xl 2xl:text-8xl">Projects</h1>
       <ul>
          <project-item
@@ -20,27 +23,47 @@
 </template>
 
 <script>
-import ProjectItem from '../templates/ProjectItem.vue';
+import ProjectItem from "../templates/ProjectItem.vue";
 
 export default {
    components: {
-      ProjectItem
+      ProjectItem,
    },
-   props: ['tabOrder'],
+   props: ["tabOrder"],
    data() {
       return {
          projects: [
             {
-               key: '1',
-               name: 'Calica.ca',
-               image: 'portfolio-website.png',
-               summary: 'My first full project using VueJS',
-               description: 'This was my first full project using VueJS and TailwindCSS. Because there isn\'t a lot of information to display, I was able to take a more creative approach with the design. This project took about 50 hours in total.',
-               tools: 'AdobeXD, VueJS, TailwindCSS',
-               github: 'https://github.com/GlenCalica/vue-portfolio'
+               key: "1",
+               name: "Progress Tracker",
+               image: "progress-tracker.png",
+               summary: "Full-stack MERN app to track metrics over time",
+               description:
+                  "Progress Tracker is a MERN SPA that can be used to track a metric over time. Progress Tracker uses ChartJS to visualize user data and JWT to handle user authentication and authorization.",
+               tools: "React, React Router, NodeJS, Express, MongoDB, JWT",
+               liveExample: "https://jovial-jalebi-d5c41c.netlify.app/",
+            },
+            {
+               key: "2",
+               name: "Portfolio Site",
+               image: "portfolio-website.png",
+               summary: "Front-end project made using VueJS",
+               description:
+                  "My portfolio site (this website) was designed using AdobeXD and developed using VueJS. Because a lot of attention was put into the design, I used TailwindCSS over other CSS frameworks to get a more custom look.",
+               tools: "AdobeXD, VueJS, TailwindCSS",
+               github: "https://github.com/GlenCalica/vue-portfolio",
+            },
+            {
+               key: "3",
+               name: "Rushing Together",
+               image: "rushing-together.png",
+               summary: "Custom WordPress template made from scratch",
+               description:
+                  "I created a custom WordPress template from scratch using WordPress developer functions, PHP, SASS, and a touch of JavaScript. Wireframes and website design were made in AdobeXD.",
+               tools: "WordPress, PHP, SASS, JavaScript",
             },
             // {
-            //    key: '2',
+            //    key: '0',
             //    name: 'Project Name',
             //    image: 'Image File Name',
             //    summary: 'Short summary',
@@ -49,8 +72,8 @@ export default {
             //    github: 'github link',
             //    liveExample: 'live example link'
             // }
-         ]
-      }
-   }
-}
+         ],
+      };
+   },
+};
 </script>
