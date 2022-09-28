@@ -41,6 +41,8 @@ export default {
                description:
                   "Progress Tracker is a MERN SPA that can be used to track a metric over time. Progress Tracker uses ChartJS to visualize user data and JWT to handle user authentication and authorization.",
                tools: "React, React Router, NodeJS, Express, MongoDB, JWT",
+               github:
+                  "https://github.com/GlenCalica/progress-tracker-frontend",
                liveExample: "https://jovial-jalebi-d5c41c.netlify.app/",
             },
             {
@@ -61,6 +63,7 @@ export default {
                description:
                   "I created a custom WordPress template from scratch using WordPress developer functions, PHP, SASS, and a touch of JavaScript. Wireframes and website design were made in AdobeXD.",
                tools: "WordPress, PHP, SASS, JavaScript",
+               github: "https://github.com/GlenCalica/rushingtogether",
             },
             // {
             //    key: '0',
